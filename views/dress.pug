@@ -1,0 +1,15 @@
+extends layout
+block content
+  h1= title
+  p Welcome to the #{title} page
+ 
+ 
+  div.container-fluid
+ 
+   div.row
+    - let results = [{ dressName: "Shirt",dressCost: 10, description: "This is best price sales" },{ dressName:"tshirts",dressCost: 05, description: "This is best price sales"},{ dressName:"suit",dressCost: 50, description: "These are party wear"}]
+      each item in results
+       div.col-sm-2
+         h5 Dress Name: #{item.dressName}
+         p Dress Cost: $#{item.dressCost}
+         p Description: #{item.description}
